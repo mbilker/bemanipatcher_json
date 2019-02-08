@@ -1,0 +1,3 @@
+[submodule "bemanipatcher"]
+	path = bemanipatcher
+	url = https://github.com/mon/BemaniPatcher.git
