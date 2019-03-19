@@ -17,7 +17,7 @@ function parse_page(file) {
   const contents = fs.readFileSync(file_path, "utf-8");
   const dom = new jsdom.JSDOM(contents);
 
-  const patch_sets = [];
+  const versions = [];
 
   const sandbox = {
     window: {
@@ -29,7 +29,7 @@ function parse_page(file) {
     },
     DllPatcherContainer: function DllPatcherContainer() {},
     DllPatcher: function DllPatcher(dll_name, patches, description) {
-      patch_sets.push({ dll_name, description, patches });
+      versions.push({ dll_name, description, patches });
     },
   };
   vm.createContext(sandbox);
@@ -44,7 +44,7 @@ function parse_page(file) {
 
   parent.push({
     file,
-    patch_sets,
+    versions,
   });
 }
 
