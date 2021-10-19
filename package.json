@@ -2,6 +2,6 @@
   "name": "hex_edits",
   "version": "1.0.0",
   "dependencies": {
-    "jsdom": "^13.1.0"
+    "jsdom": "^18.0.0"
   }
 }

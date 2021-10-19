@@ -27,8 +27,8 @@ function parse_page(file) {
         }
       }
     },
-    DllPatcherContainer: function DllPatcherContainer() {},
-    DllPatcher: function DllPatcher(dll_name, patches, description) {
+    PatchContainer: function PatchContainer() {},
+    Patcher: function Patcher(dll_name, description, patches) {
       versions.push({ dll_name, description, patches });
     },
   };
